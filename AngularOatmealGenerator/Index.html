@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="PorridgeApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Porridge Recipe Generator</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,100,700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+    <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=zocial" />
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/porridge.js"></script>
+
+  </head>
+  <body>
+    <div class="main">
+      <h1>♨ Porridge Recipe Generator</h1>
+      <p class="intro-body">Porridge is a deceptively easy and nutritious breakfast. Making good porridge isn't too hard, but if you are an avid consumer of it, it can get a little repetitive after awhile. My hope is that this generator may be of service to you when you are in need of a little inspiration. </p>
+      <hr>
+      <div class="cooking-body">
+
+        <div ng-controller="PorridgeController as porridgeGen">
+          <form ng-submit="porridgeGen.generate()">
+            <span class="sub-title">>Ingredients</span>
+            <input type="submit" value="Generate new" class="generate-button">
+          </form>
+          <ul>
+            <li ng-repeat="ingredient in porridgeGen.ingredients">
+              <span class="ng-bind: {{ingredient.style}}">{{ingredient.name}}, {{ingredient.amount}}</span>
+            </li>
+          </ul>
+        </div>
+
+        <span class="sub-title">>Instructions</span>
+        <div class="recipe-body">
+          <p>(4 servings)</p>
+          <p>All you have to do is throw the above ingredients in a pot and let them simmer for about an hour. It's pretty hard to make bad porridge, but be careful not to add too many spices or they can be overwhelming.</p>
+          <p>When reheating to serve, I would recommend adding in a bit of water. Also, feel free to add some fresh or dried fruits, and perhaps some nuts or other toppings to add some variety when serving!</p>
+          <p class="note">Note: If you don't have all the ingredients or don't like them, don't worry! Just press the 'Generate new' button again to get a different recipe. </p>
+          <p class="note">* Substitute milk with soy, rice, almond, or coconut milk depending on personal preferences or food allergies.</p>
+        </div>
+
+      </div>
+      <hr>
+
+      <footer>
+
+        <div class="social">
+          <!-- <span class="footer-text">Created with AngularJS.</span> -->
+          <!-- <a href="#" class="zocial-twitter"></a> -->
+          <a href="https://github.com/SCassady" class="zocial-github"></a>
+          <a href="mailto:scassady@ualberta.ca" class="zocial-gmail"></a>
+          <!-- <a href="#" class="zocial-linkedin"></a> -->
+        </div>
+
+      </footer>
+
+    </div>
+  </body>
+</html>

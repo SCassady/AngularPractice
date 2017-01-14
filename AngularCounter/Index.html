@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="CounterApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Temporary Counter App</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,100,700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+    <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=zocial" />
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/counter.js"></script>
+
+  </head>
+  <body>
+    <div class="main">
+      <h1>Temporary Counter App</h1>
+      <p class="intro-body">This is a simple counter app. It's not persistent, at least not yet.</p>
+      <hr>
+
+      <div class="cooking-body">
+        <span class="sub-title">>Technologies</span>
+
+        <div ng-controller="CounterController as counter" class="counter-div">
+          <ul>
+            <li ng-repeat="(key, data) in counter.techs" class="tech-list">
+              <form ng-submit="counter.increment(key)">
+                <!-- <div class="tech-name"> -->
+                  <span>{{key}}, </span>
+                <!-- </div>
+                <div class="tech-count"> -->
+                  <span>{{data}}</span>
+                <!-- </div> -->
+                <input type="submit" value="+" class="generate-button">
+              </form>
+            </li>
+          </ul>
+          <form ng-submit="counter.reset()">
+            <input type="submit" value="Reset" class="generate-button">
+          </form>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+
+        <div class="social">
+          <!-- <span class="footer-text">Created with AngularJS.</span> -->
+          <!-- <a href="#" class="zocial-twitter"></a> -->
+          <a href="https://github.com/SCassady" class="zocial-github"></a>
+          <a href="mailto:scassady@ualberta.ca" class="zocial-gmail"></a>
+          <!-- <a href="#" class="zocial-linkedin"></a> -->
+        </div>
+
+      </footer>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html ng-app="CheatSheetApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Coding Cheat Sheet</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,100,700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=zocial" />
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/cheatsheets.js"></script>
+
+  </head>
+  <body>
+    <div class="main">
+      <h1>♨ Coding Cheat Sheet</h1>
+      <p class="intro-body">A few cheat sheets, consolidating all the front-end syntax and what-not I have learned so far. </p>
+      <hr>
+      <div class="sheet-container">
+
+        <div ng-controller="SheetController as sheetManager">
+
+          <div class="buttons">
+            <form ng-submit="sheetManager.switchSheet('html')">
+              <input type="submit" value="Html" class="generate-button">
+            </form>
+            <form ng-submit="sheetManager.switchSheet('css')">
+              <input type="submit" value="CSS" class="generate-button">
+            </form>
+            <form ng-submit="sheetManager.switchSheet('javascript')">
+              <input type="submit" value="Javascript" class="generate-button">
+            </form>
+            <form ng-submit="sheetManager.switchSheet('jQuery')">
+              <input type="submit" value="JQuery" class="generate-button">
+            </form>
+            <form ng-submit="sheetManager.switchSheet('angular')">
+              <input type="submit" value="Angular" class="generate-button">
+            </form>
+            <form ng-submit="sheetManager.switchSheet('python')">
+              <input type="submit" value="Python" class="generate-button">
+            </form>
+            <form ng-submit="sheetManager.switchSheet('cSharp')">
+              <input type="submit" value="C#/Unity" class="generate-button">
+            </form>
+            <form ng-submit="sheetManager.switchSheet('markdown')">
+              <input type="submit" value="Markdown" class="generate-button">
+            </form>
+          </div>
+
+          <div class="sheet-body">
+
+            <div class="sheet-title">
+              <span class="sub-title">{{sheetManager.SheetEnum.sheets[sheetManager.currentSheet].name}}</span>
+            </div>
+
+            <table class="sheet-table">
+              <thead>
+                <tr>
+                  <th>Syntax</th>
+                  <th>Explanation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="(key, data) in sheetManager.SheetEnum.sheets[sheetManager.currentSheet].sheet">
+                  <td class="syntax">{{key}}</td>
+                  <td class="explanation">{{data}}</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <hr>
+
+      <footer>
+
+        <div class="social">
+          <!-- <span class="footer-text">Created with AngularJS.</span> -->
+          <!-- <a href="#" class="zocial-twitter"></a> -->
+          <a href="https://github.com/SCassady" class="zocial-github"></a>
+          <a href="mailto:scassady@ualberta.ca" class="zocial-gmail"></a>
+          <!-- <a href="#" class="zocial-linkedin"></a> -->
+        </div>
+
+      </footer>
+
+    </div>
+  </body>
+</html>

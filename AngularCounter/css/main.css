@@ -1,0 +1,130 @@
+h1, h2, h3, h4, .sub-title {
+  font-family: 'Lato', sans-serif;
+  color: #A0522D;
+}
+
+h1 {
+  margin-top: 0;
+  padding-top: 5px;
+  font-family: 'Merienda One', cursive;
+  font-size: 36px;
+  text-align: center;
+  /*color: ##DC6B7D;*/
+}
+
+body {
+  width: 100%;
+  background-color: #e8fcfc;
+  padding: 0;
+  margin: 0;
+}
+
+a, p, span, li {
+  font-family: 'Vollkorn', serif;
+}
+
+hr {
+  border: none;
+  border-top: medium double gray;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  max-width: 100%;
+  /*margin-left: 20px;*/
+  /*margin-right: 20px;*/
+}
+
+footer {
+  width: 100%;
+  max-width: 870px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.main {
+  width: 100%;
+  max-width: 870px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding: 20px;
+  /*background-color: #f3f3f3;*/
+}
+
+.cooking-body {
+
+}
+.intro-body, .recipe-body {
+  padding-left: 20px;
+}
+.intro-body {
+  margin-top: 30px;
+}
+.sub-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.note {
+  font-style: italic;
+}
+.done-true {
+  text-decoration: line-through;
+  color:grey;
+}
+
+.counter-div {
+  width: 100%;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tech-list {
+  list-style-type: none;
+  text-align: right;
+  display: block;
+  flex-wrap: nowrap;
+}
+
+.tech-name {
+  text-align: left;
+}
+
+.tech-count {
+  text-align: right;
+}
+
+.generate-button {
+  font-size: 14px;
+  background-color: white;
+  color: #808080;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  outline: none;
+  margin-left: 10px;
+  cursor:pointer;
+}
+
+.regular {
+  color: #1a7599;
+}
+
+.grain {
+  color: #b36b00;
+}
+
+.spice {
+  color: #7b9d15;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+[class*="zocial-"]:before {
+  color: #888;
+  display: inline-block;
+  font-family: 'zocial', sans-serif;
+  width: 4em;
+}

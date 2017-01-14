@@ -1,0 +1,140 @@
+h1, h2, h3, h4, .sub-title {
+  font-family: 'Lato', sans-serif;
+  color: #A0522D;
+}
+
+h1 {
+  margin-top: 0;
+  padding-top: 5px;
+  font-family: 'Merienda One', cursive;
+  font-size: 32px;
+  text-align: center;
+  /*color: ##DC6B7D;*/
+}
+
+body {
+  width: 100%;
+  background-color: #e8fcfc;
+  padding: 0;
+  margin: 0;
+}
+
+a, p, span, li {
+  font-family: 'Vollkorn', serif;
+}
+
+hr {
+  border: none;
+  border-top: medium double gray;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  max-width: 100%;
+  /*margin-left: 20px;*/
+  /*margin-right: 20px;*/
+}
+
+footer {
+  width: 100%;
+  max-width: 870px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.main {
+  width: 100%;
+  max-width: 870px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding: 20px;
+  /*background-color: #f3f3f3;*/
+}
+
+.sheet-container {
+
+}
+.intro-body, .sheet-body {
+  padding-left: 20px;
+}
+.intro-body {
+  margin-top: 30px;
+}
+
+.sheet-title {
+  text-align: center;
+}
+
+.sub-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.note {
+  font-style: italic;
+}
+.done-true {
+  text-decoration: line-through;
+  color:grey;
+}
+
+.generate-button {
+  font-size: 14px;
+  background-color: white;
+  color: #808080;
+  /*-webkit-border-radius: 5px;*/
+  /*border-radius: 5px;*/
+  outline: none;
+  margin-left: 10px;
+  cursor:pointer;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.sheet-table {
+  margin-top: 8px;
+  width: 100%;
+}
+
+th {
+  height: 35px;
+}
+
+td {
+  padding: 10px;
+}
+
+.sheet-table, tablehead, tr, td, th {
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+.syntax {
+  text-align: center;
+  font-family: 'PT Mono', monaco, monospace;
+  font-size: 13px;
+  width: 30%;
+}
+
+.explanation {
+  padding-left: 14px;
+  /*width: 70%;*/
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+[class*="zocial-"]:before {
+  color: #888;
+  display: inline-block;
+  font-family: 'zocial', sans-serif;
+  width: 4em;
+}
